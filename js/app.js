@@ -23,12 +23,26 @@ let vid_volume = 0.25;
 let btn_back = document.getElementById("btn_back");
 let btn_forward = document.getElementById("btn_forward");
 let range = document.getElementById("range");
-let btN_full = document.getElementById("btn_fullscreen")
+let btN_full = document.getElementById("btn_fullscreen");
+let loop_control = [0,1];
+let cont_loop = 1;
+let btn_loop = document.getElementById("btn_loop");
 //===================================
+
+let endedVideo = setInterval(function () {
+if(vid.ended){
+    nextPlay()
+}
+},500);
+
 window.addEventListener("load",function () {
     vid.autoplay = true;
     vid.load();
 })
+let call = btn_loop.addEventListener("click", lc)
+let lpc = setInterval(call,100);
+
+
 btn_play.addEventListener("click",play_pause);
 vid.addEventListener("click",play_pause)
 btn_next.addEventListener("click",nextPlay);
@@ -155,6 +169,24 @@ function backward() {
 }
 function tul() {
 return vid.ended
+}
+
+function lc() {
+    console.log(loop_control[cont_loop])
+
+if(loop_control[cont_loop]===1){
+    btn_loop.style.opacity="100%"
+    vid.loop = true;
+
+}else{
+    vid.loop = false;
+    btn_loop.style.opacity="30%"
+}
+    cont_loop+=1;
+if(cont_loop>1){
+    cont_loop = 0
+}
+
 }
 
 

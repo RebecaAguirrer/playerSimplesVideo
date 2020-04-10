@@ -17,7 +17,7 @@
   }
   #btn_mut{width: 15px}
   #btn_fullscreen{float: right;margin-top: 8px;margin-left: 5px;width: 15px;margin-right: 5px}
-
+  #btn_loop{display: none}
 }
 
 @media screen and (min-width: 292px) and (max-width: 550px) {
@@ -35,7 +35,8 @@
   #btn_play,#btn_prev,#btn_next,#btn_forward,#btn_back,#vol_minus,#vol_plus{margin-top: 5px;
   }
   #btn_mut{margin-top: 8px}
-  #btn_fullscreen{float: right;margin-top: 8px;margin-left: 5px;width: 20px;margin-right: 5px}
+  #btn_fullscreen{float: right;margin-top: 10px;margin-left: 5px;width: 18px;margin-right: 5px}
+  #btn_loop{float: right;margin-top: 3px;opacity: 30%;margin-left: 10px;margin-right: 10px}
 }
 
 @media screen and (min-width: 551px)and (max-width: 750px) {
@@ -67,7 +68,7 @@
   #btn_mut:hover{opacity: 100%}
   #btn_fullscreen:hover{opacity: 100%}
   #btn_fullscreen{float: right;margin-top: 8px;margin-left: 5px;width: 20px;margin-right: 5px}
-
+  #btn_loop{float: right;margin-top: 5px;opacity: 30%;margin-left: 10px;margin-right: 10px}
 
 }
 @media screen and (min-width:751px) {
@@ -100,5 +101,6 @@
   #btn_fullscreen:hover{opacity: 100%}
   #btn_prev,#btn_next,#btn_forward,#btn_back,#vol_minus,#vol_plus,#btn_mut,#btn_play{width: 40px}
   #btn_mut{width: 30px}
-  #btn_fullscreen{float: right;margin-top: 5px;margin-left: 5px}
+  #btn_fullscreen{float: right;margin-top: 5px;margin-left: 5px;}
+  #btn_loop{float: right;margin-top: 5px;opacity: 30%;margin-left: 10px;margin-right: 10px}
 }
