@@ -18,6 +18,7 @@
   #btn_mut{width: 15px}
   #btn_fullscreen{float: right;margin-top: 8px;margin-left: 5px;width: 15px;margin-right: 5px}
   #btn_loop{display: none}
+  #btn_loop{display: none}
 }
 
 @media screen and (min-width: 292px) and (max-width: 550px) {
@@ -37,9 +38,7 @@
   #btn_mut{margin-top: 8px}
   #btn_fullscreen{float: right;margin-top: 10px;margin-left: 5px;width: 18px;margin-right: 5px}
   #btn_loop{float: right;margin-top: 3px;opacity: 30%;}
-  #btn_next,#btn_prev,#btn_back,#btn_forward,#btn_play{
-    margin-left: 2px;margin-right: -10px;
-  }
+#btn_loop{display: none}
 }
 
 @media screen and (min-width: 551px)and (max-width: 750px) {
