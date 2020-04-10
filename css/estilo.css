@@ -2,3 +2,6 @@
 
 #progresBar{background: #32ff69}
 #btnControls{display: none}
+#info{width: 200px; height: 200px;background: rgba(0,0,0,0.4);position: absolute;right: 40px;top: 30px;border-radius: 5px; border: solid 1px white;padding: 25px;display: none}
+.title{color: white;margin: 15px;word-wrap: break-word;margin-top: 20px}
+

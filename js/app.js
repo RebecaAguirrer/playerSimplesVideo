@@ -2,7 +2,7 @@
 if(screen.width<214){
     document.write("")
 }
-
+let contTitle = 0
 let vid = document.getElementById("myvideo");
 let time = document.getElementById("time");
 var videoTime = vid.duration;
@@ -27,6 +27,17 @@ let btN_full = document.getElementById("btn_fullscreen");
 let loop_control = [0,1];
 let cont_loop = 1;
 let btn_loop = document.getElementById("btn_loop");
+let songTtitles =
+    ["En Toi Je Sais Que Je Suis",
+        "La Croix Seule Me Suffit",
+        "Ton Grand Amour",
+        "Dieu Est Puissant",
+        "Sauve Avec Puissance",
+        "Le Calvaire"
+
+];
+let songName = document.getElementById("songName");
+let dur = document.getElementById("dur");
 //===================================
 
 let endedVideo = setInterval(function () {
@@ -55,6 +66,7 @@ vol_minus.addEventListener("click",diminiuVolume);
 btn_forward.addEventListener("click",forward);
 btn_back.addEventListener("click",backward);
 
+
 //=======================
 if(screen.width>550){
     vid.addEventListener("dblclick", function (e) {
@@ -76,7 +88,7 @@ btN_full.addEventListener("click", function (e) {
         vid.webkitRequestFullscreen();
     }
 })
-
+songName.innerHTML=`Song Name: ${songTtitles[0]}`
 function VideoProgress() {
     let pcvideo = 100 /Math.trunc(vid.duration);
     pcvideo*=vid.currentTime;
@@ -90,14 +102,15 @@ if(vid.paused){
     vid.pause()
     btn_play.src="img/play_bg_white.png"}}
 function nextPlay() {
-   // titulo.innerHTML=nome_musica[cont]
+    songName.innerHTML=`Song Name: ${songTtitles[cont]}`
     vid.src=musicas[cont];
     vid.play()
     cont+=1;
     if(cont>musicas.length-1){
         cont=0}}
 function prevPlay() {
-    //titulo.innerHTML=nome_musica[cont]
+    songName.innerHTML=`Song Name: ${songTtitles[cont]}`;
+
     vid.src=musicas[cont];
     vid.play()
     cont-=1;
@@ -188,18 +201,37 @@ if(cont_loop>1){
 }
 
 }
+/*
+function showTtile(){
+
+    contTitle+=1
+    songName.innerHTML=`Song Name: ${songTtitles[cont-1]}`
+    if(cont>musicas){
+        contTitle = 0
+    }
+
+    console.log(cont)
+}
+
+*/
 //--JQUERY SECTION----//
+
+
     let pp = $("#pp");
     let bc = $("#btnControls");
+
 
 
     let vidd = $("#contentVideo");
     vidd.hover(function (e) {
         bc.slideToggle();
     });
+
+$("#btn_info").click(function () {
+$("#info").slideToggle()
+})
+
 //=======================================
-
-
 
 
 
