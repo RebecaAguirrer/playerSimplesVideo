@@ -42,6 +42,27 @@ btn_forward.addEventListener("click",forward);
 btn_back.addEventListener("click",backward);
 
 //=======================
+if(screen.width>550){
+    vid.addEventListener("click", function (e) {
+        if (vid.requestFullscreen) {
+            vid.requestFullscreen();
+        } else if (vid.mozRequestFullScreen) {
+            vid.mozRequestFullScreen();
+        } else if (vid.webkitRequestFullscreen) {
+            vid.webkitRequestFullscreen();
+        }
+    })
+}
+btN_full.addEventListener("click", function (e) {
+    if (vid.requestFullscreen) {
+        vid.requestFullscreen();
+    } else if (vid.mozRequestFullScreen) {
+        vid.mozRequestFullScreen();
+    } else if (vid.webkitRequestFullscreen) {
+        vid.webkitRequestFullscreen();
+    }
+})
+
 function VideoProgress() {
     let pcvideo = 100 /Math.trunc(vid.duration);
     pcvideo*=vid.currentTime;
@@ -136,25 +157,9 @@ function tul() {
 return vid.ended
 }
 
-btN_full.addEventListener("click", function (e) {
-    if (vid.requestFullscreen) {
-        vid.requestFullscreen();
-    } else if (vid.mozRequestFullScreen) {
-        vid.mozRequestFullScreen();
-    } else if (vid.webkitRequestFullscreen) {
-        vid.webkitRequestFullscreen();
-    }
-})
 
-vid.addEventListener("click", function (e) {
-    if (vid.requestFullscreen) {
-        vid.requestFullscreen();
-    } else if (vid.mozRequestFullScreen) {
-        vid.mozRequestFullScreen();
-    } else if (vid.webkitRequestFullscreen) {
-        vid.webkitRequestFullscreen();
-    }
-})
+
+
 
 
 
