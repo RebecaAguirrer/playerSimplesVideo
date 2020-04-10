@@ -22,7 +22,13 @@ let vol_minus = document.getElementById("vol_minus");
 let vid_volume = 0.25;
 let btn_back = document.getElementById("btn_back");
 let btn_forward = document.getElementById("btn_forward");
+let range = document.getElementById("range");
+let btN_full = document.getElementById("btn_fullscreen")
 //===================================
+window.addEventListener("load",function () {
+    vid.autoplay = true;
+    vid.load();
+})
 btn_play.addEventListener("click",play_pause);
 vid.addEventListener("click",play_pause)
 btn_next.addEventListener("click",nextPlay);
@@ -34,10 +40,11 @@ vol_minus.addEventListener("click",controle_volume_m)
 vol_minus.addEventListener("click",diminiuVolume);
 btn_forward.addEventListener("click",forward);
 btn_back.addEventListener("click",backward);
+
 //=======================
 function VideoProgress() {
     let pcvideo = 100 /Math.trunc(vid.duration);
-    pcvideo*=vid.currentTime
+    pcvideo*=vid.currentTime;
     progress.style.width=`${pcvideo}%`}
 let cell = setInterval(VideoProgress,1000)
 function play_pause() {
@@ -128,6 +135,32 @@ function backward() {
 function tul() {
 return vid.ended
 }
+
+btN_full.addEventListener("click", function (e) {
+    if (vid.requestFullscreen) {
+        vid.requestFullscreen();
+    } else if (vid.mozRequestFullScreen) {
+        vid.mozRequestFullScreen();
+    } else if (vid.webkitRequestFullscreen) {
+        vid.webkitRequestFullscreen();
+    }
+})
+
+vid.addEventListener("click", function (e) {
+    if (vid.requestFullscreen) {
+        vid.requestFullscreen();
+    } else if (vid.mozRequestFullScreen) {
+        vid.mozRequestFullScreen();
+    } else if (vid.webkitRequestFullscreen) {
+        vid.webkitRequestFullscreen();
+    }
+})
+
+
+
+
+
+
 
 
 
