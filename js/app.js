@@ -44,7 +44,7 @@ let lpc = setInterval(call,100);
 
 
 btn_play.addEventListener("click",play_pause);
-vid.addEventListener("click",play_pause)
+//vid.addEventListener("click",play_pause)
 btn_next.addEventListener("click",nextPlay);
 btn_prev.addEventListener("click",prevPlay);
 btn_muten.addEventListener("click",muten)
@@ -188,7 +188,16 @@ if(cont_loop>1){
 }
 
 }
+//--JQUERY SECTION----//
+    let pp = $("#pp");
+    let bc = $("#btnControls");
 
+
+    let vidd = $("#contentVideo");
+    vidd.hover(function (e) {
+        bc.slideToggle();
+    });
+//=======================================
 
 
 
