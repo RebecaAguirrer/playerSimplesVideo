@@ -65,6 +65,9 @@ vol_minus.addEventListener("click",controle_volume_m)
 vol_minus.addEventListener("click",diminiuVolume);
 btn_forward.addEventListener("click",forward);
 btn_back.addEventListener("click",backward);
+window.addEventListener("load",function () {
+vid.pause()
+})
 
 
 //=======================
