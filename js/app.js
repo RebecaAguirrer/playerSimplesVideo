@@ -36,6 +36,7 @@ let songTtitles =
         "Le Calvaire"
 
 ];
+let time2 = document.getElementById("time2");
 let songName = document.getElementById("songName");
 let dur = document.getElementById("dur");
 //===================================
@@ -177,6 +178,20 @@ let cel  = setInterval(function(){
     }
 
 },1000);
+let cel2  = setInterval(function(){
+    var timeInSec = vid.currentTime;
+    var hours = Math.floor(timeInSec / 3600) % 24;
+    var minutes = Math.floor(timeInSec / 60) % 60;
+    var seconds = timeInSec % 60;
+    var sonar = (isNaN(senar()))?senar():"00:00"
+    var timeNow = /*(hours < 10 ? "0" + hours : hours) + "-" + */(minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + Math.trunc(seconds) : Math.trunc(seconds));
+    if(isNaN(timeNow)){
+        time2 = document.getElementById("time2").innerHTML=timeNow
+    }
+
+},1000);
+
+
 function forward() {
 vid.currentTime+=20;
 }
@@ -222,12 +237,14 @@ function showTtile(){
 
     let pp = $("#pp");
     let bc = $("#btnControls");
+    let tm2 = $("#time2")
 
 
 
     let vidd = $("#contentVideo");
     vidd.hover(function (e) {
         bc.slideToggle();
+        tm2.slideToggle()
     });
 
 $("#btn_info").click(function () {
