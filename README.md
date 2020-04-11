@@ -1,3 +1,3 @@
 # Simple Video Player
 
-### Made with Html, Javascript and CSS
+![Player de video](https://imgur.com/WcKx6Zi)
