@@ -226,25 +226,14 @@ if(cont_loop>1){
 }
 
 }
-/*
-function showTtile(){
 
-    contTitle+=1
-    songName.innerHTML=`Song Name: ${songTtitles[cont-1]}`
-    if(cont>musicas){
-        contTitle = 0
-    }
-
-    console.log(cont)
-}
-
-*/
 //--JQUERY SECTION----//
 
 
     let pp = $("#pp");
     let bc = $("#btnControls");
     let tm2 = $("#time2")
+    let myvid = $("#myvideo");
 
 
 
@@ -257,7 +246,9 @@ function showTtile(){
 $("#btn_info").click(function () {
 $("#info").slideToggle()
 })
-
+myvid.click(function () {
+$("#info").hide();
+})
 //=======================================
 
 
