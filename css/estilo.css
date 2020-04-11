@@ -3,12 +3,13 @@
     src: url("../fonts/varsity_regular.ttf");
 }
 
-
+img{cursor: pointer}
+#btn_info{display: none}
 *{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Cabin', sans-serif;}
 ody{background: url("https://images.wallpaperscraft.com/image/dark_colors_patterns_backgrounds_10561_1366x768.jpg")}
-#progresBar{background:url("../img/progress_bg.jpg");background-size: cover}
+#progresBar{<!--background:url("../img/progress_bg.jpg")-->;background-size: cover;background: red}
 #btnControls{display: none}
-#info{width: 200px; height: 200px;background: rgba(0,0,0,0.4);position: absolute;right: 40px;top: 30px;
+#info{width: 200px; height: 200px;background: rgba(0,0,0,0.7);position: absolute;right: 40px;top: 30px;
     border-radius: 5px; border: solid 1px white;padding: 25px;display: none}
 .title{color: white;margin: 15px;word-wrap: break-word;margin-top: 20px}
 #btn_fullscreen,#btn_mut,#vol_minus,#vol_plus,#btn_loop,#time{margin: 10px}

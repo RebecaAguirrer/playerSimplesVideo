@@ -256,6 +256,9 @@ function showTtile(){
     vidd.hover(function (e) {
         bc.slideToggle();
         tm2.slideToggle()
+        if(screen.width>313){
+            $("#btn_info").slideToggle()
+        }
     });
 
 $("#btn_info").click(function () {
