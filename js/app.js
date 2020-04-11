@@ -92,7 +92,7 @@ btN_full.addEventListener("click", function (e) {
         vid.webkitRequestFullscreen();
     }
 })
-songName.innerHTML=`Song Name: ${songTtitles[0]}`
+songName.innerHTML=`Song Name : ${songTtitles[0]}`
 function VideoProgress() {
     let pcvideo = 100 /Math.trunc(vid.duration);
     pcvideo*=vid.currentTime;
@@ -113,7 +113,7 @@ function nextPlay() {
     if(cont>musicas.length-1){
         cont=0}}
 function prevPlay() {
-    songName.innerHTML=`Song Name: ${songTtitles[cont]}`;
+    songName.innerHTML=`Song Name : ${songTtitles[cont]}`;
 
     vid.src=musicas[cont];
     vid.play()
@@ -167,18 +167,7 @@ function senar() {
     var timeNow = /*(hours < 10 ? "0" + hours : hours) + "-" + */(minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + Math.trunc(seconds) : Math.trunc(seconds));
 }
 let cel  = setInterval(function(){
-    var timeInSec = vid.currentTime;
-    var hours = Math.floor(timeInSec / 3600) % 24;
-    var minutes = Math.floor(timeInSec / 60) % 60;
-    var seconds = timeInSec % 60;
-  var sonar = (isNaN(senar()))?senar():"00:00"
-    var timeNow = /*(hours < 10 ? "0" + hours : hours) + "-" + */(minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + Math.trunc(seconds) : Math.trunc(seconds));
-    if(isNaN(timeNow)){
-        time = document.getElementById("time").innerHTML=timeNow
-    }
 
-},1000);
-let cel2  = setInterval(function(){
     var timeInSec = vid.currentTime;
     var hours = Math.floor(timeInSec / 3600) % 24;
     var minutes = Math.floor(timeInSec / 60) % 60;
@@ -186,7 +175,25 @@ let cel2  = setInterval(function(){
     var sonar = (isNaN(senar()))?senar():"00:00"
     var timeNow = /*(hours < 10 ? "0" + hours : hours) + "-" + */(minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + Math.trunc(seconds) : Math.trunc(seconds));
     if(isNaN(timeNow)){
-        time2 = document.getElementById("time2").innerHTML=timeNow
+        time = document.getElementById("time").innerHTML=timeNow
+    }
+
+},1000);
+let cel2  = setInterval(function(){
+    var timeInSec2 = vid.duration;
+    var hours2 = Math.floor(timeInSec2 / 3600) % 24;
+    var minutes2 = Math.floor(timeInSec2 / 60) % 60;
+    var seconds2 = timeInSec2 % 60;
+    var timeNow2 = /*(hours2 < 10 ? "0" + hours2 : hours2) + "-" + */(minutes2 < 10 ? "0" + minutes2 : minutes2) + ":" + (seconds2  < 10 ? "0" + Math.trunc(seconds2) : Math.trunc(seconds2));
+
+    var timeInSec = vid.currentTime;
+    var hours = Math.floor(timeInSec / 3600) % 24;
+    var minutes = Math.floor(timeInSec / 60) % 60;
+    var seconds = timeInSec % 60;
+    var sonar = (isNaN(senar()))?senar():"00:00"
+    var timeNow = /*(hours < 10 ? "0" + hours : hours) + "-" + */(minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + Math.trunc(seconds) : Math.trunc(seconds));
+    if(isNaN(timeNow)){
+        time2 = document.getElementById("time2").innerHTML=timeNow+' / '+timeNow2
     }
 
 },1000);

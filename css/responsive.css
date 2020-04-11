@@ -1,4 +1,5 @@
-*{font-family: Sketch}
+*{
+  font-family: Sketch, serif}
 @media screen and (max-width: 314px)  {
   #container{width: 100%;margin: 0 auto;}
   #contentVideo{width: 100% ;height: 300px;background: rgba(0,0,0,1);position: relative}
