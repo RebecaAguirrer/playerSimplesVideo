@@ -1,7 +1,10 @@
 
-if(screen.width<214){
-    document.write("")
-}
+let ReslutionCheck = setInterval(function () {
+    if(screen.width<214){
+        document.write("Resolution not supported");
+        clearInterval(ReslutionCheck)
+    }
+},1000)
 let contTitle = 0
 let vid = document.getElementById("myvideo");
 let time = document.getElementById("time");
@@ -226,7 +229,19 @@ if(cont_loop>1){
 }
 
 }
+/*
+function showTtile(){
 
+    contTitle+=1
+    songName.innerHTML=`Song Name: ${songTtitles[cont-1]}`
+    if(cont>musicas){
+        contTitle = 0
+    }
+
+    console.log(cont)
+}
+
+*/
 //--JQUERY SECTION----//
 
 
