@@ -1,3 +1,3 @@
 # Simple Video Player
 
-![Player de video](https://imgur.com/WcKx6Zi)
+![](https://s6.gifyu.com/images/player.jpg)
