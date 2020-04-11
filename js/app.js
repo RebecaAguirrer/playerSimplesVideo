@@ -68,7 +68,7 @@ btn_back.addEventListener("click",backward);
 
 
 //=======================
-if(screen.width>550){
+
     vid.addEventListener("dblclick", function (e) {
         if (vid.requestFullscreen) {
             vid.requestFullscreen();
@@ -78,7 +78,7 @@ if(screen.width>550){
             vid.webkitRequestFullscreen();
         }
     })
-}
+
 btN_full.addEventListener("click", function (e) {
     if (vid.requestFullscreen) {
         vid.requestFullscreen();
