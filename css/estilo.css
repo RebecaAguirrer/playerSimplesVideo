@@ -2,7 +2,8 @@
 
 #progresBar{background:url("../img/progress_bg.jpg");background-size: cover}
 #btnControls{display: none}
-#info{width: 200px; height: 200px;background: rgba(0,0,0,0.4);position: absolute;right: 40px;top: 30px;border-radius: 5px; border: solid 1px white;padding: 25px;display: none}
+#info{width: 200px; height: 200px;background: rgba(0,0,0,0.4);position: absolute;right: 40px;top: 30px;
+    border-radius: 5px; border: solid 1px white;padding: 25px;display: none}
 .title{color: white;margin: 15px;word-wrap: break-word;margin-top: 20px}
 #btn_fullscreen,#btn_mut,#vol_minus,#vol_plus,#btn_loop,#time{margin: 10px}
 
