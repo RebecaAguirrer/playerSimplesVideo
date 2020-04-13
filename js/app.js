@@ -1,11 +1,8 @@
 
-let ReslutionCheck = setInterval(function () {
-    if(screen.width<214){
-        document.write("Resolution not supported");
-        clearInterval(ReslutionCheck)
-    }
-},1000)
-let contTitle = 0
+
+
+let contTitle = 0;
+
 let vid = document.getElementById("myvideo");
 let time = document.getElementById("time");
 var videoTime = vid.duration;
@@ -14,7 +11,7 @@ let wid = 0
 let btn_play =document.getElementById("btn_play");
 let cont = 1;
 let musicas = ["videos/1.mp4","videos/2.mp4","videos/3.mp4",
-    "videos/4.mp4","videos/5.mp4","videos/6.mp4","videos/7.mp4"];
+    "videos/4.mp4","videos/5.mp4","videos/6.mp4","videos/7.mp4","videos/8.mp4"];
 let btn_next = document.getElementById("btn_next");
 let btn_prev = document.getElementById("btn_prev");
 let btn_muten = document.getElementById("btn_mut");
@@ -37,7 +34,8 @@ let songTtitles =
         "Dieu Est Puissant",
         "Sauve Avec Puissance",
         "Le Calvaire",
-        "Raja S'gala Raja"
+        "Raja S'gala Raja",
+        "Roi des roi"
 
 ];
 let time2 = document.getElementById("time2");
@@ -261,6 +259,15 @@ function showTtile(){
             $("#btn_info").slideToggle()
         }
     });
+
+let container = $("#container")
+if(screen.width<214){
+    document.write("Resolution not supported");
+    container.hide();
+
+}
+
+
 
 $("#btn_info").click(function () {
 $("#info").slideToggle()
