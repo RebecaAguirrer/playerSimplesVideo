@@ -14,7 +14,7 @@ let wid = 0
 let btn_play =document.getElementById("btn_play");
 let cont = 1;
 let musicas = ["videos/1.mp4","videos/2.mp4","videos/3.mp4",
-    "videos/4.mp4","videos/5.mp4","videos/6.mp4"];
+    "videos/4.mp4","videos/5.mp4","videos/6.mp4","videos/7.mp4"];
 let btn_next = document.getElementById("btn_next");
 let btn_prev = document.getElementById("btn_prev");
 let btn_muten = document.getElementById("btn_mut");
@@ -36,7 +36,8 @@ let songTtitles =
         "Ton Grand Amour",
         "Dieu Est Puissant",
         "Sauve Avec Puissance",
-        "Le Calvaire"
+        "Le Calvaire",
+        "Raja S'gala Raja"
 
 ];
 let time2 = document.getElementById("time2");
@@ -100,7 +101,7 @@ function VideoProgress() {
     let pcvideo = 100 /Math.trunc(vid.duration);
     pcvideo*=vid.currentTime;
     progress.style.width=`${pcvideo}%`}
-let cell = setInterval(VideoProgress,1000)
+let cell = setInterval(VideoProgress,1000);
 function play_pause() {
 if(vid.paused){
     vid.play()
